@@ -1,0 +1,187 @@
+/* Start Variables */
+:root {
+    --main-backgroundColor: hsl(233, 47%, 7%);
+    --card-backgroundColor: hsl(244, 38%, 16%);
+    --transparent-imgColor: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-heading: hsla(0, 0%, 100%, 0.6);
+    --section-padding: 80px;
+}
+/* End Variables */
+/* Start Main Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-backgroundColor);
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 576px) {
+    .container {
+    max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+    max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+    max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+    max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+    max-width: 1320px;
+    }
+}
+/* End Main Rules */
+/* Start Card */
+.card {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.card .card-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background-color: var(--card-backgroundColor);
+    border-radius: 8px;
+}
+@media (max-width: 767px) {
+    .card .card-content {
+        flex-direction: column-reverse;
+    }
+}
+.card .card-content .left-card {
+    padding: 6%;
+    flex-basis: 50%;
+}
+@media (max-width: 767px) {
+    .card .card-content .left-card {
+        padding:3%;
+        padding-top: 40px;
+    }
+}
+.card .card-content .left-card .text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.22;
+    color: var(--main-heading);
+    padding-bottom: 25px;
+}
+@media (max-width: 767px) {
+    .card .card-content .left-card .text h1 {
+        font-size: 28px;
+        line-height: 1.14;
+        text-align: center;
+        margin: 0 auto 16px;
+        max-width: 100%;
+    }
+}
+.card .card-content .left-card .text h1 span {
+    color: var(--transparent-imgColor);
+}
+.card .card-content .left-card .text p {
+    color: var(--main-paragraph);
+    line-height: 1.67;
+    font-size: 15px;
+}
+@media (max-width: 767px) {
+    .card .card-content .left-card .text p {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+.card .card-content .left-card .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 72px;
+}
+@media (max-width: 767px) {
+    .card .card-content .left-card .stat {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+}
+.card .card-content .left-card .stat .stat-item {
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .card .card-content .left-card .stat .stat-item {
+        margin-bottom: 24px;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+.card .card-content .left-card .stat .stat-item div:first-child {
+    color: var(--main-heading);
+    font-size: 24px;
+    font-weight: bold;
+}
+.card .card-content .left-card .stat .stat-item div:last-child {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--stat-heading);
+    font-size: 12px;
+    line-height: 2.08;
+    text-transform: uppercase;
+}
+.card .card-content .right-card {
+    flex-basis: 50%;
+    position: relative;
+}
+.card .card-content .right-card .mobile {
+    display: none;
+}
+.card .card-content .right-card .desktop{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 8px 8px 0;
+}
+.card .card-content .right-card .overlay {
+    content: "";
+    position: absolute;
+    background-color: var(--transparent-imgColor);
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+}
+@media (max-width: 767px) {
+    .card .card-content .right-card .desktop {
+        display: none;
+    }
+    .card .card-content .right-card .mobile {
+        display: block;
+        max-width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+}
+/* End Card */
+
+
+
